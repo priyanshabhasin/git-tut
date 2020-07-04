@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Realtime communication with WebRTC</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <h1>Realtime communication with WebRTC</h1>
+  <input  type = "text" id="myText" value= "">
+  
+  <script>
+      document.getElementById("myText").value=fun()
+    function fun(){
+        var url=document.URL;
+        var urlParams = new URL(url).searchParams;
+        
+        var firstName = urlParams.get("id");
+        var lastName = urlParams.get("cid")
+        return (firstName+" "+lastName);
+
+    }
+    
+        
+  </script>
+</body>
+</html>
